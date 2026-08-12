@@ -5,6 +5,7 @@ const porta = 7777
 // Carrega o caminho dos arquivos
 const home = path.join(__dirname, 'Pages/index.html')
 const sobre = path.join(__dirname, 'Pages/sobre.html')
+const error = path.join(__dirname, 'Pages/error.html')
 
 const server = http.createServer((req, res) => {
    // qual informação eu tenho?
@@ -21,15 +22,10 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.end(fs.readFileSync(sobre, 'utf-8'));
    }
-   if(recurso === '/404') {
+   else {  
     res.statusCode = 404; //404
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    return res.end(fs.readFileSync(404, 'utf-8'));
-   }
-   else {  
-    res.statusCode = 401;
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    res.end('401 Não autorizado');
+    return res.end(fs.readFileSync(error, 'utf-8'));
    }
 
 });
