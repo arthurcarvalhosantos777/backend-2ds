@@ -21,6 +21,11 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.end(fs.readFileSync(sobre, 'utf-8'));
    }
+   if(recurso === '/404') {
+    res.statusCode = 404; //404
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    return res.end(fs.readFileSync(404, 'utf-8'));
+   }
    else {  
     res.statusCode = 401;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');

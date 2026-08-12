@@ -1,13 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Pagina Inicial  | Obrigado pela visita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial | Obrigado pela visita</title>
+    <!-- Google Fonts: Space Mono (Monospace Tech) & Plus Jakarta Sans (Clean Modern) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-black: #080808;
+            --card-bg: rgba(18, 18, 18, 0.85);
+            --card-border: rgba(255, 255, 255, 0.12);
+            --accent-red: #ff3b30;
+            --text-primary: #ffffff;
+            --text-secondary: #8e8e93;
+            --font-main: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            --font-mono: 'Space Mono', monospace;
+            --radius-pill: 9999px;
+            --radius-card: 28px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-black);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px;
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Top Navigation Header */
+        .topbar {
+            width: 100%;
+            max-width: 1000px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            margin-top: 16px;
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .red-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-red);
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(255, 59, 48, 0.7);
+        }
+
+        .nav-tabs {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            padding: 4px;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--card-border);
+        }
+
+        .nav-tab {
+            padding: 8px 20px;
+            border-radius: var(--radius-pill);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .nav-tab:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-tab.active {
+            color: #000000;
+            background: #ffffff;
+        }
+
+        /* Main Section Container */
+        .main-stage {
+            flex: 1;
+            width: 100%;
+            max-width: 680px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+        }
+
+        /* Nothing Style Card Container */
+        .nothing-card {
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-card);
+            padding: 48px 40px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nothing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+        }
+
+        .card-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+            line-height: 1.25;
+        }
+
+        .card-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .card-actions {
+            margin-top: 8px;
+        }
+
+        .cta-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #ffffff;
+            color: #000000;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: var(--radius-pill);
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12);
+        }
+
+        .cta-pill:hover {
+            background: #e5e5e5;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 255, 255, 0.22);
+        }
+
+        .cta-pill svg {
+            transition: transform 0.2s ease;
+        }
+
+        .cta-pill:hover svg {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 640px) {
+            .topbar {
+                padding: 0 16px;
+            }
+
+            .nothing-card {
+                padding: 32px 24px;
+            }
+
+            .card-title {
+                font-size: 1.75rem;
+            }
+
+            .cta-pill {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h3>Bem-vindo à nossa página inicial!</h3>
-    <p>Olá, seja bem-vindo!</p>
-    <a href="/sobre">Saiba mais sobre nós</a>
+    <!-- Top Navigation Header -->
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            <span class="red-dot"></span>
+            <span>BASE (1)</span>
+        </a>
+
+        <nav class="nav-tabs">
+            <a href="/index" class="nav-tab active">Início</a>
+            <a href="/sobre" class="nav-tab">Sobre</a>
+        </nav>
+    </header>
+
+    <!-- Main Section Container -->
+    <main class="main-stage">
+        <div class="nothing-card">
+            <div class="card-tag">
+                <span class="red-dot"></span>
+                <span>Visão Geral</span>
+            </div>
+
+            <div class="card-content">
+                <h1 class="card-title">Bem-vindo à nossa página inicial!</h1>
+                <p class="card-desc">Olá, seja bem-vindo!</p>
+            </div>
+
+            <div class="card-actions">
+                <a href="/sobre" class="cta-pill">
+                    <span>Saiba mais sobre nós</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
