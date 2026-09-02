@@ -1,10 +1,11 @@
 // importação moderna com ESM (import)
 import express from 'express'
 
-const app = express()
+const app = express() // instanciar Express
 
 app.get('/', (req, res) => {
-    res.send('Home Ok!')
+    res.send(
+        `<h3>Página Inicial</h3>\n<p>`)
 })
 
 app.get('/sobre', (req, res) => {
