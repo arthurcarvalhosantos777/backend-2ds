@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos — Vinil Co.</title>
+  <meta name="description" content="Catálogo completo de vinis — Jazz, MPB, Rock Clássico, Soul, Eletrônica e muito mais. Prensagens 180g para audiófilos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+  <input type="checkbox" id="menu-toggle" class="mobile-menu-toggle" aria-hidden="true">
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Vinil Co. — Página inicial">
+        <div class="brand-disc" aria-hidden="true"></div>
+        Vinil Co.
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="nav-list" role="list">
+          <li><a href="/" class="nav-link">Início</a></li>
+          <li><a href="/produtos" class="nav-link ativo" aria-current="page">Produtos</a></li>
+          <li><a href="/sobre" class="nav-link">Sobre</a></li>
+          <li><a href="/contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <label for="menu-toggle" class="mobile-menu-label" aria-label="Abrir menu de navegação">
+        <div class="hamburger-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </label>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Cabeçalho da página -->
+      <header class="products-page-header">
+        <h1 class="products-page-title">Catálogo de Vinis</h1>
+        <p class="products-page-desc">
+          Prensagens 180g, edições comemorativas e raridades garimpadas para você.
+        </p>
+      </header>
+
+      <!-- Filtros de Categoria (links CSS — sem JS) -->
+      <section class="filter-section" aria-label="Filtrar por categoria">
+        <p class="filter-label-title">Filtrar por Categoria</p>
+
+        <div class="category-pills" role="list">
+          <a href="produtos.html"           class="pill-link active"    role="listitem">Todos</a>
+          <a href="produtos.html#jazz"      class="pill-link"           role="listitem">Jazz &amp; Blues</a>
+          <a href="produtos.html#mpb"       class="pill-link"           role="listitem">MPB &amp; Samba</a>
+          <a href="produtos.html#rock"      class="pill-link"           role="listitem">Rock Clássico</a>
+          <a href="produtos.html#soul"      class="pill-link"           role="listitem">Soul &amp; Funk</a>
+          <a href="produtos.html#eletronica" class="pill-link"          role="listitem">Eletrônica</a>
+        </div>
+
+        <p class="filter-count">Exibindo <strong>8 títulos</strong> do catálogo</p>
+      </section>
+
+      <!-- Grid de Produtos — 8 cards -->
+      <section aria-label="Lista de produtos disponíveis">
+        <div class="products-grid">
+
+          <!-- 1 — Kind of Blue -->
+          <article class="product-card" id="jazz">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #0B2545 0%, #134074 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Essencial</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">Kind of Blue</p>
+                <p class="album-cover-artist">Miles Davis</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">Jazz &amp; Blues</span>
+                <span class="card-year">1959</span>
+              </div>
+              <h2 class="card-title">Kind of Blue</h2>
+              <p class="card-artist">Miles Davis</p>
+              <p class="card-desc">Obra monumental do jazz modal, gravada em duas sessões históricas nos estúdios Columbia Records. Prensagem 180g audiofílica.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 189,90</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP 12&quot; · 180g · 33⅓ RPM · Capa simples cartão 350g</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 — Clube da Esquina -->
+          <article class="product-card" id="mpb">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #6B3E26 0%, #8B5A2B 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Nacional</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">Clube da Esquina</p>
+                <p class="album-cover-artist">Milton Nascimento</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">MPB &amp; Samba</span>
+                <span class="card-year">1972</span>
+              </div>
+              <h2 class="card-title">Clube da Esquina</h2>
+              <p class="card-artist">Milton Nascimento &amp; Lô Borges</p>
+              <p class="card-desc">Marco supremo da música brasileira que funde harmonia jazzística, folk e a essência musical das montanhas mineiras.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 249,90</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP Duplo · 180g · Gatefold com encarte histórico</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 — Dark Side -->
+          <article class="product-card" id="rock">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #111111 0%, #1C1C1C 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Destaque</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">Dark Side of the Moon</p>
+                <p class="album-cover-artist">Pink Floyd</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">Rock Clássico</span>
+                <span class="card-year">1973</span>
+              </div>
+              <h2 class="card-title">The Dark Side of the Moon</h2>
+              <p class="card-artist">Pink Floyd</p>
+              <p class="card-desc">Álbum conceitual revolucionário sobre conflitos humanos. Remaster do 50º aniversário em vinil 180g, com pôster ilustrativo e gatefold.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 229,90</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP 12&quot; · 180g · Gatefold + encarte + pôster</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 — What's Going On -->
+          <article class="product-card" id="soul">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #1F363D 0%, #40798C 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Alta Procura</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">What's Going On</p>
+                <p class="album-cover-artist">Marvin Gaye</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">Soul &amp; Funk</span>
+                <span class="card-year">1971</span>
+              </div>
+              <h2 class="card-title">What's Going On</h2>
+              <p class="card-artist">Marvin Gaye</p>
+              <p class="card-desc">Obra-prima do soul com arranjos orquestrais sofisticados da Motown e composições sobre direitos civis e paz.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 199,90</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP 12&quot; · 180g · Prensagem direta · Capa envernizada</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 — A Love Supreme -->
+          <article class="product-card">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #2B2118 0%, #4A3B32 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Colecionador</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">A Love Supreme</p>
+                <p class="album-cover-artist">John Coltrane</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">Jazz &amp; Blues</span>
+                <span class="card-year">1965</span>
+              </div>
+              <h2 class="card-title">A Love Supreme</h2>
+              <p class="card-artist">John Coltrane</p>
+              <p class="card-desc">Suíte espiritual em quatro movimentos executada pelo lendário quarteto acústico de Coltrane. Master analógico original.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 210,00</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP 12&quot; · 180g · Gatefold pesada · Impulse! Records</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 — Transa -->
+          <article class="product-card">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #2E382E 0%, #506250 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Raridade</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">Transa</p>
+                <p class="album-cover-artist">Caetano Veloso</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">MPB &amp; Samba</span>
+                <span class="card-year">1972</span>
+              </div>
+              <h2 class="card-title">Transa</h2>
+              <p class="card-artist">Caetano Veloso</p>
+              <p class="card-desc">Gravado em Londres durante o exílio, combinando guitarras elétricas, baião, reggae e poesia refinada.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 219,00</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP 12&quot; · 180g Vinil Virgem · Capa tríptica histórica</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 — Abbey Road -->
+          <article class="product-card">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #1A2530 0%, #2C3E50 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Essencial</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">Abbey Road</p>
+                <p class="album-cover-artist">The Beatles</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">Rock Clássico</span>
+                <span class="card-year">1969</span>
+              </div>
+              <h2 class="card-title">Abbey Road</h2>
+              <p class="card-artist">The Beatles</p>
+              <p class="card-desc">O último álbum gravado pelo quarteto de Liverpool. Stereo Remaster com suíte contínua do Lado B e produção primorosa.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 215,00</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP 12&quot; · 180g · Capa laminada + encarte interno</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 — Aphex Twin -->
+          <article class="product-card" id="eletronica">
+            <div class="album-cover">
+              <div class="album-bg" style="background: linear-gradient(135deg, #3D3A37 0%, #57534E 100%);"></div>
+              <div class="album-side-disc"></div>
+              <div class="card-badge-overlay"><span class="badge">Vanguarda</span></div>
+              <div class="album-cover-info">
+                <p class="album-cover-title">Selected Ambient Works</p>
+                <p class="album-cover-artist">Aphex Twin</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-genre">Eletrônica</span>
+                <span class="card-year">1992</span>
+              </div>
+              <h2 class="card-title">Selected Ambient Works 85–92</h2>
+              <p class="card-artist">Aphex Twin</p>
+              <p class="card-desc">Pedra fundamental da música eletrônica ambiente. Sintetizadores analógicos, timbres quentes e edição dupla limitada.</p>
+              <div class="card-price-row">
+                <span class="card-price">R$ 239,90</span>
+                <span class="fictitious-label">(ilustrativo)</span>
+              </div>
+              <p class="mt-xs" style="font-size:.75rem; color: var(--text-3);">LP Duplo · 180g · Gatefold especial · Edição limitada</p>
+              <div class="card-actions mt-xs">
+                <a href="contato.html" class="btn btn-sm btn-outline">Solicitar Info</a>
+                <a href="contato.html" class="btn btn-sm btn-primary">Reservar</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">Vinil Co.</p>
+          <p class="footer-brand-desc">Curadoria especializada de vinis clássicos e raridades para audiófilos e colecionadores apaixonados pelo som analógico.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Navegação</p>
+          <ul class="footer-links">
+            <li><a href="index.html"    class="footer-link">Início</a></li>
+            <li><a href="produtos.html" class="footer-link">Produtos</a></li>
+            <li><a href="sobre.html"    class="footer-link">Sobre</a></li>
+            <li><a href="contato.html"  class="footer-link">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Informações</p>
+          <ul class="footer-links">
+            <li><span class="footer-link">Segunda a Sexta</span></li>
+            <li><span class="footer-link">09h às 18h (BRT)</span></li>
+            <li><span class="footer-link">contato@vinilco.com.br</span></li>
+            <li><span class="footer-link fictitious-label">(dados fictícios ilustrativos)</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Redes Sociais</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram (fictício)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn (fictício)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook (fictício)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vinil Co. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
